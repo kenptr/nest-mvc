@@ -1,4 +1,5 @@
 import { Controller, Get, Render } from '@nestjs/common';
+import * as pkg from '../package.json';
 
 @Controller()
 export class AppController {
@@ -7,6 +8,7 @@ export class AppController {
   getHello() {
     return {
       name: 'world',
+      version: pkg.version,
     };
   }
 }
